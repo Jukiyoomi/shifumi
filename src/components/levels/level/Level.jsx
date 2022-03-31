@@ -9,5 +9,10 @@ export const Level = ({ rank }) => {
         setLevel(levels[rank])
     }
 
-    return <div className="rounded-full bg-white w-7 h-7 mx-1.5 cursor-pointer level relative border-4" onClick={ChangeLevel}></div>
+    return (
+        <div className="text-center mx-2">
+            <div className="rounded-full bg-white w-7 h-7 cursor-pointer level relative border-4" onClick={ChangeLevel}></div>
+            <p>{levels[rank] == 'medium' ? 'med.' : levels[rank]}</p>
+        </div>
+    )
 }
