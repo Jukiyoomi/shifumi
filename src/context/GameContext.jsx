@@ -1,4 +1,4 @@
-import React, { createContext, useState } from 'react'
+import React, { createContext, useState, useEffect } from 'react'
 
 export const GameContext = createContext()
 
@@ -13,9 +13,30 @@ export function GameContextProvider(props) {
         player: 0,
         opponent: 0,
     })
+    const [isGaming, setIsGaming] = useState(false)
+    const [difficultyRatio, setDifficultyRatio] = useState(0)
+
+    useEffect(() => {
+        switch (level) {
+            case 'easy':
+                setDifficultyRatio(0.5)
+                break
+
+            case 'medium':
+                setDifficultyRatio(0.7)
+                break
+
+            case 'hard':
+                setDifficultyRatio(0.87)
+                break
+
+            default:
+                break
+        }
+    }, [level])
 
     return (
-        <GameContext.Provider value={{ choices, setChoices, level, levels, setLevel, scores, setScores }}>
+        <GameContext.Provider value={{ choices, setChoices, level, levels, setLevel, scores, setScores, isGaming, setIsGaming, difficultyRatio }}>
             {props.children}
             {/* {} */}
         </GameContext.Provider>

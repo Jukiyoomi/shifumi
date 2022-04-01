@@ -5,10 +5,6 @@ import { Level } from './level/Level'
 export const LevelBox = () => {
     const { levels, level } = useContext(GameContext)
 
-    useEffect(() => {
-        console.log(level)
-    }, [level])
-
     return (
         <div className="flex w-fit mx-auto items-center">
             <p className="mr-3">Levels : </p>
