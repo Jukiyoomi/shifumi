@@ -11,8 +11,46 @@ body {
     background: var(--bg-color);
     color: var(--text-color);
     font-family: 'League Gothic', sans-serif;
-    /* letter-spacing: 1rem; */
+    overflow: hidden;
 }
 .logo {
     letter-spacing: 18px;
+}
+
+.level {
+    background: transparent;
+    border-color: var(--text-color);
+}
+
+.level::after {
+    position: absolute;
+    content: '';
+    background: var(--text-color);
+    border-radius: 50%;
+    width: 0%;
+    height: 0%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.3s, height 0.3s;
+}
+
+.level:hover::after {
+    width: 120%;
+    height: 120%;
+}
+
+.box {
+    width: 415px;
+    height: 540px;
+}
+
+.box-container {
+    width: calc(100% - 288px);
+}
+
+.bubble {
+    /* background: red; */
+    margin-bottom: 5px;
+    border-radius: 50%;
 }
