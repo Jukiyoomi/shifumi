@@ -2,11 +2,11 @@ import React, { useEffect, useContext } from 'react'
 import { GameContext } from '../../../context/GameContext'
 
 export const Level = ({ rank }) => {
-    const { levels, level, setLevel } = useContext(GameContext)
+    const { levels, level, setLevel, setIsGaming } = useContext(GameContext)
 
     const ChangeLevel = () => {
-        if (level == levels[rank]) return
         setLevel(levels[rank])
+        // setIsGaming(true)
     }
 
     return (
