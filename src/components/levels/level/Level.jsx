@@ -6,7 +6,7 @@ export const Level = ({ rank }) => {
 
     const ChangeLevel = () => {
         setLevel(levels[rank])
-        // setIsGaming(true)
+        setIsGaming(true)
     }
 
     return (

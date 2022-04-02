@@ -8,10 +8,10 @@ function App() {
     return (
         <div className="py-10">
             <h1 className="text-center font-bold text-2xl uppercase logo mb-8">Shifumi</h1>
-            {/* {!isGaming && <LevelBox />}
-            {isGaming && <GameBox />} */}
-            <LevelBox />
-            <GameBox />
+            {!isGaming && <LevelBox />}
+            {isGaming && <GameBox />}
+            {/* <LevelBox />
+            <GameBox /> */}
         </div>
     )
 }

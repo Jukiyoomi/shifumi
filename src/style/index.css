@@ -11,7 +11,7 @@ body {
     background: var(--bg-color);
     color: var(--text-color);
     font-family: 'League Gothic', sans-serif;
-    /* letter-spacing: 1rem; */
+    overflow: hidden;
 }
 .logo {
     letter-spacing: 18px;
@@ -38,4 +38,18 @@ body {
 .level:hover::after {
     width: 120%;
     height: 120%;
+}
+.box {
+    width: 415px;
+    height: 540px;
+}
+
+.box-container {
+    width: calc(100% - 288px);
+}
+
+.bubble {
+    /* background: red; */
+    margin-bottom: 5px;
+    border-radius: 50%;
 }
