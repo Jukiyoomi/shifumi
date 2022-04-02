@@ -15,7 +15,7 @@ export function GameContextProvider(props) {
         opponent: 0,
     })
 
-    const [isGaming, setIsGaming] = useState(false)
+    const [isGaming, setIsGaming] = useState(true)
     const [difficultyRatio, setDifficultyRatio] = useState(0)
 
     useEffect(() => {
@@ -36,6 +36,10 @@ export function GameContextProvider(props) {
                 break
         }
     }, [level])
+
+    useEffect(() => {
+        console.log(choices)
+    }, [choices])
 
     return (
         <GameContext.Provider value={{ choices, setChoices, level, levels, setLevel, scores, setScores, isGaming, setIsGaming, difficultyRatio }}>
