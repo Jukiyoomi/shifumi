@@ -3,12 +3,11 @@ import { GameContext } from '../context/GameContext'
 
 export const Bubbles = ({ source, alt, relatedPlayer }) => {
     const [isHovered, setIsHovered] = useState(false)
-    const { choices, setChoices } = useContext(GameContext)
+    const { choices, setChoices, setHasChosen } = useContext(GameContext)
 
     const setValue = (e) => {
-        relatedPlayer == 'player'
-            ? setChoices({ ...choices, player: e.target.getAttribute('value') })
-            : setChoices({ ...choices, opponent: e.target.getAttribute('value') })
+        setChoices({ ...choices, player: e.target.getAttribute('value') })
+        setHasChosen(true)
     }
     return (
         <>

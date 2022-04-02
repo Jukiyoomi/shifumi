@@ -9,12 +9,12 @@ import { Bubbles } from '../../bubbles'
 import { GameContext } from '../../../context/GameContext'
 
 export const Player = ({ name, cas, relatedPlayer, disabled }) => {
-    const { scores, choices } = useContext(GameContext)
+    const { scores, choices, hasChosen } = useContext(GameContext)
     return (
         <div
             className={`flex box items-center justify-around ${cas != 'player' ? 'flex-row-reverse' : ''} ${
                 disabled ? 'pointer-events-none opacity-50' : ''
-            }`}>
+            } ${hasChosen ? 'pointer-events-none' : ''}`}>
             <h1 className="text-6xl">{name}</h1>
             <div className="flex justify-center items-center flex-col">
                 <p className="text-2xl">{scores[relatedPlayer]}</p>
