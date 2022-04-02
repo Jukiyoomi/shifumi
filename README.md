@@ -46,6 +46,7 @@ Here are several steps I found relevant to follow in order to achieve this proje
 8. [x] Implement score update
 9. [x] Stop the game when the player or the machine reaches 5 points
 10. [ ] Implement a cool loading design using `SVG` and `background blurring`
+11. [ ] Get actual name of the player and put it instead of 'You'
 
 Down here you can follow my progress on this project.
 
