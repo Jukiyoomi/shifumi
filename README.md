@@ -4,11 +4,11 @@
 
 ## Navigation
 
-[Explanation](#explanation)
-[Design](#design)
-[Technologies and Tools Used](#technologies-and-tools-used)
-[Plan](#plan)
-[Progress](#progress)
+* [Explanation](#explanation)
+* [Design](#design)
+* [Technologies and Tools Used](#technologies-and-tools-used)
+* [Plan](#plan)
+* [Progress](#progress)
 
 ## Explanation
 
@@ -42,9 +42,9 @@ Here are several steps I found relevant to follow in order to achieve this proje
 4. [x] Create the basic UI with React - Tailwind
 5. [x] Create Global Provider for state management
 6. [x] Implement the possibility to have several levels
-7. [ ] Return the computer choice according to the set difficulty and player choice
-8. [ ] Implement score update
-9. [ ] Stop the game when the player or the machine reaches 5 points
+7. [x] Return the computer choice according to the set difficulty and player choice
+8. [x] Implement score update
+9. [x] Stop the game when the player or the machine reaches 5 points
 10. [ ] Implement a cool loading design using `SVG` and `background blurring`
 
 Down here you can follow my progress on this project.
