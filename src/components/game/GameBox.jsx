@@ -9,7 +9,7 @@ export const GameBox = () => {
         <div className="flex box-container mx-auto justify-between mt-5">
             <Player name="You" cas="player" relatedPlayer={'player'} />
             <img src={separator} alt="separator" />
-            <Player name="IA" relatedPlayer={'opponent'} />
+            <Player name="IA" relatedPlayer={'opponent'} disabled={true} />
         </div>
     )
 }
