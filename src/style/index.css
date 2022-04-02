@@ -53,3 +53,7 @@ body {
     margin-bottom: 5px;
     border-radius: 50%;
 }
+.btn {
+    color: var(--bg-color);
+    background: var(--text-color);
+}
