@@ -7,6 +7,10 @@
     --bg-color: #010031;
 }
 
+* {
+    user-select: none;
+}
+
 body {
     background: var(--bg-color);
     color: var(--text-color);

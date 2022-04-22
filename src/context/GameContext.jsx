@@ -5,11 +5,15 @@ export const GameContext = createContext()
 export function GameContextProvider(props) {
     const levels = ['easy', 'medium', 'hard']
     const items = ['rock', 'paper', 'scissor']
+    const maxPointsToWin = 5
+
     const [hasChosen, setHasChosen] = useState(false)
     const [choices, setChoices] = useState({
         player: null,
         opponent: null,
     })
+
+    const [winner, setWinner] = useState(null)
 
     const [level, setLevel] = useState(levels[2])
     const [scores, setScores] = useState({
@@ -17,7 +21,7 @@ export function GameContextProvider(props) {
         opponent: 0,
     })
 
-    const [isGaming, setIsGaming] = useState(true)
+    const [isGaming, setIsGaming] = useState(false)
     const [difficultyRatio, setDifficultyRatio] = useState(0)
 
     return (
@@ -37,6 +41,9 @@ export function GameContextProvider(props) {
                 hasChosen,
                 setHasChosen,
                 setDifficultyRatio,
+                winner,
+                setWinner,
+                maxPointsToWin,
             }}>
             {props.children}
         </GameContext.Provider>

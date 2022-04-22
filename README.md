@@ -4,11 +4,11 @@
 
 ## Navigation
 
-* [Explanation](#explanation)
-* [Design](#design)
-* [Technologies and Tools Used](#technologies-and-tools-used)
-* [Plan](#plan)
-* [Progress](#progress)
+-   [Explanation](#explanation)
+-   [Design](#design)
+-   [Technologies and Tools Used](#technologies-and-tools-used)
+-   [Plan](#plan)
+-   [Progress](#progress)
 
 ## Explanation
 
@@ -88,3 +88,10 @@ _(These days don't necessarily follow each other, but these are the days when I 
 
 -   I don't know if it is a good way to proceed, but I did not find another way to do that.
 -   At this point of the project, I have a _**Shifumi that works**_ 🎊
+
+---
+
+### Day 5
+
+-   A few days passed since the last time I worked on this project. Today, I fixed some bugs about the `difficultyRatio`, I did not exactly understand how to use it for the game. Also, I saw a bug concerning a `setTimeout` in a `useEffect` triggered by an object. This timeout was activated each time I changed the object, and I change this object very often, from full values to null and vice versa. I understood that problem by using a `console.time()` which was logged many times at once.
+    The last step is the loading page using background blurring.

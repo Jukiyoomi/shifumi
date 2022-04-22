@@ -17,20 +17,22 @@ export const Update = () => {
         hasChosen,
         setHasChosen,
         setDifficultyRatio,
+        setWinner,
+        maxPointsToWin,
     } = useContext(GameContext)
 
     useEffect(() => {
         switch (level) {
             case 'easy':
-                setDifficultyRatio(0.5)
+                setDifficultyRatio(0.67)
                 break
 
             case 'medium':
-                setDifficultyRatio(0.7)
+                setDifficultyRatio(0.83)
                 break
 
             case 'hard':
-                setDifficultyRatio(0.87)
+                setDifficultyRatio(0.95)
                 break
 
             default:
@@ -41,54 +43,62 @@ export const Update = () => {
     useEffect(() => {
         if (hasChosen) {
             let randomToCheckPlayerChoice = Math.random()
-            if (randomToCheckPlayerChoice >= difficultyRatio) {
+            if (randomToCheckPlayerChoice <= difficultyRatio) {
                 switch (choices.player) {
                     case 'rock':
                         setChoices({ ...choices, opponent: 'paper' })
+                        console.log('paper')
                         break
                     case 'paper':
                         setChoices({ ...choices, opponent: 'scissor' })
+                        console.log('scissor')
                         break
                     case 'scissor':
                         setChoices({ ...choices, opponent: 'rock' })
+                        console.log('rock')
                         break
 
                     default:
                         break
                 }
             } else {
+                console.log('Random')
                 setChoices({ ...choices, opponent: items[Math.round(Math.random() * (items.length - 1))] })
             }
         }
     }, [hasChosen])
 
     useEffect(() => {
-        if (!Object.values(choices).includes(null) && !(choices.opponent == choices.player)) {
+        console.log(isGaming, !Object.values(choices).includes(null), !(choices.opponent == choices.player), choices)
+        if (isGaming && !Object.values(choices).includes(null) && !(choices.opponent == choices.player)) {
             if (
                 (choices.player == 'paper' && choices.opponent == 'rock') ||
                 (choices.player == 'scissor' && choices.opponent == 'paper') ||
                 (choices.player == 'rock' && choices.opponent == 'scissor')
             ) {
                 setScores({ ...scores, player: scores.player + 1 })
+                console.log('Player +1')
             } else {
                 setScores({ ...scores, opponent: scores.opponent + 1 })
+                console.log('Opponent +1')
             }
         }
-
-        setTimeout(() => {
-            setChoices({ player: null, opponent: null })
-            setHasChosen(false)
-        }, 7000)
+        if (hasChosen && !Object.values(choices).includes(null)) {
+            setTimeout(() => {
+                setChoices({ player: null, opponent: null })
+                setHasChosen(false)
+            }, 3000)
+        }
     }, [choices])
 
     useEffect(() => {
-        if (scores.player == 5 || scores.opponent == 5) {
-            setHasChosen(true)
-            setChoices({ player: null, opponent: null })
+        if (scores.player == maxPointsToWin || scores.opponent == maxPointsToWin) {
+            scores.player == maxPointsToWin ? setWinner('You') : setWinner('IA')
             setTimeout(() => {
                 setIsGaming(false)
                 setScores({ player: 0, opponent: 0 })
-            }, 5000)
+                setWinner(null)
+            }, 3000)
         }
     }, [scores])
 

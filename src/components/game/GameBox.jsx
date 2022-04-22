@@ -8,7 +8,7 @@ export const GameBox = () => {
     return (
         <div className="flex box-container mx-auto justify-between mt-5">
             <Player name="You" cas="player" relatedPlayer={'player'} disabled={hasChosen ? true : false} />
-            <img src={separator} alt="separator" />
+            <img src={separator} alt="separator" className="h-1/2" />
             <Player name="IA" relatedPlayer={'opponent'} disabled={true} />
         </div>
     )
