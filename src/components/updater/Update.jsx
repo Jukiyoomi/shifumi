@@ -24,11 +24,11 @@ export const Update = () => {
     useEffect(() => {
         switch (level) {
             case 'easy':
-                setDifficultyRatio(0.67)
+                setDifficultyRatio(0.45)
                 break
 
             case 'medium':
-                setDifficultyRatio(0.83)
+                setDifficultyRatio(0.67)
                 break
 
             case 'hard':

@@ -96,3 +96,16 @@ _(These days don't necessarily follow each other, but these are the days when I 
 
 -   A few days passed since the last time I worked on this project. Today, I fixed some bugs about the `difficultyRatio`, I did not exactly understand how to use it for the game. Also, I saw a bug concerning a `setTimeout` in a `useEffect` triggered by an object. This timeout was activated each time I changed the object, and I change this object very often, from full values to null and vice versa. I understood that problem by using a `console.time()` which was logged many times at once.
     The last step is the loading page using background blurring.
+
+---
+
+### Day 6
+
+-   Months later 😭, I remembered I did not finish this project. Today, I decided to make the loading page of the game. I learned to create custom Tailwind animations (through tailwind.config.js). I decreased a little bit the difficulty ratios for every level because I couldn't win any game against the easiest level.
+
+---
+
+## Review
+
+During this project, I learned a lot of things. The first one was to write a README file. It is the first project where I entirely wrote one. Also, it helped me to understand React better and JS. The difficulty of manipulating so much states at a time was a great challenge for me too.
+As an improvement, I could use Redux for the states and maybe use TypeScript which would be better the simple JS.

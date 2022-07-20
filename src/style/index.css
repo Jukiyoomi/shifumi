@@ -61,3 +61,18 @@ body {
     color: var(--bg-color);
     background: var(--text-color);
 }
+
+.title {
+    transform: scaleX(0) translateY(-50%);
+    transform-origin: left;
+    /* animation: init-title 1s ease-in-out linear forwards; */
+}
+
+/* @keyframes init-title {
+    from {
+        transform: scaleX(0);
+    }
+    to {
+        transform: scaleX(1);
+    }
+} */
