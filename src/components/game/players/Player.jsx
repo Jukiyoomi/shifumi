@@ -5,7 +5,7 @@ import paper from '../../../public/paper.svg'
 import paperHover from '../../../public/paper-hover.svg'
 import scissor from '../../../public/scissor.svg'
 import scissorHover from '../../../public/scissor-hover.svg'
-import { Bubbles } from '../../bubbles'
+import { Bubbles } from '../../Bubbles'
 import { GameContext } from '../../../context/GameContext'
 
 export const Player = ({ name, cas, relatedPlayer, disabled }) => {
