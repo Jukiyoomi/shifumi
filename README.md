@@ -15,7 +15,7 @@
 **Shifumi** (in english **Rock - Paper - Scissor**) is a famous game which takes place between 2 players. The aim of the game is to "beat" your opponent by choosing the sign that win against your opponent's.
 According to its english name, there are 3 signs that have a "winning-losing" relation which each other.
 
-[Click here to play a game and lose against my powerful program !](https://www.figma.com/file/uITqUspFto082IRqNgAo13/Shifumi-React?node-id=0%3A1)
+[Click here to play a game and lose against my powerful program !](https://jukiyoomi-shifumi.netlify.app/)
 
 ## Design
 
